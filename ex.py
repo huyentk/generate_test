@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 print "hello"
-r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
+r_cols = 'user_id', 'viewed_id', 'clicked_id', 'num_click'
 
-ratings_base = pd.read_csv('ml-100k/u1.test', sep='\t', names=r_cols, encoding='latin-1')
+ratings_base = pd.read_csv('ad.base', sep='\t', names=r_cols, encoding='latin-1')
 rate_base = ratings_base.values
 
 X_train, X_test = train_test_split(rate_base, test_size=0.2)
